@@ -136,14 +136,16 @@ orig.json 的字串了。
 還記得在《建立 i18n 處理函式》中的這串錯誤訊息嗎？
 
 ```
-Error: The string id [xxxxx] isn't vaild! Please report this error to developer!
+Error: The string id [{:s}] isn't vaild! Please report this error to developer!\n
 ```
 
 這段文字你可以修改。這段文字儲存在 `theString.py` 中，直接修改成你喜歡的文字就好。
 唯獨「{:s}」這個必須在字串當中，否則可能會發生錯誤。(「{:s}」就是那個不存在的字串 ID。)
 
+另外 `\n` 也建議保留，否則下一段文字可能會接到這錯誤訊息後，導致訊息可讀性降低。
+
 # 推薦工具
 - [JSON 語言檔案合併差異工具](https://github.com/pan93412/json-langfile-merge-tool)
 
 # 作者
-pan93412
+pan93412 <<pan93412@gmail.com>\>, 2018.
