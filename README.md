@@ -57,14 +57,17 @@ Error: The string id [xxxxx] isn't vaild! Please report this error to developer!
 i18n.str(string_id):
     """
     回傳 string_id 所對應的字串。
+        
+    字串優先級
+        若翻譯語言檔案中沒有某字串 -> 使用原文語言檔案中的字串。
+        若原文語言檔案沒有某字串 -> 發出 theString.py 中定義的錯誤字串至 stderr。
 
     string_id
-    請參閱 LangHandler 說明。欲顯示的字串所對應之字串 ID。
-    例如 "string_id": "字串"
+        請參閱根函式說明。此處需輸入在語言檔案所指定的字串 ID。
     """
 ```
 
-因此我們知道了使用方法就是 i18n.str("字串 ID")。
+從以上說明中，我們知道了使用方法就是 i18n.str("字串 ID")。
 
 假如你的語言檔案長這樣：
 
